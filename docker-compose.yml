@@ -148,10 +148,12 @@ services:
         - "dockerhost:${DOCKER_HOST_IP}"
       ports:
         - "${WORKSPACE_SSH_PORT}:22"
+        - "8080:8080"
       tty: true
       environment:
         - PHP_IDE_CONFIG=${PHP_IDE_CONFIG}
         - DOCKER_HOST=tcp://docker-in-docker:2375
+        - ${COMPOSE_PROJECT_NAME}.dev.local:0.0.0.0
       networks:
         - frontend
         - backend
