@@ -153,7 +153,7 @@ services:
       environment:
         - PHP_IDE_CONFIG=${PHP_IDE_CONFIG}
         - DOCKER_HOST=tcp://docker-in-docker:2375
-        - ${COMPOSE_PROJECT_NAME}.dev.local:0.0.0.0
+        - ${COMPOSE_PROJECT_NAME}.local:0.0.0.0
       networks:
         - frontend
         - backend
