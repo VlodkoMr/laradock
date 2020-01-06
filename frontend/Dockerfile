@@ -39,6 +39,7 @@ RUN curl -sL https://deb.nodesource.com/setup_13.x  | bash -
 
 RUN apt-get update && apt-get install -y nodejs ruby-dev rubygems-integration
 RUN gem install sass -v 3.4.1
+RUN npm install -g @vue/cli
 
 WORKDIR /var/www/frontend
 
